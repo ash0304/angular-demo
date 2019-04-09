@@ -3,3 +3,7 @@
 <section>
   <router-outlet></router-outlet>
 </section>
+<br>
+<hr>
+<app-counter (counterChange)="onCounterChange($event)" [initialCounter]="initialCounter"></app-counter>
+<p> Result : {{ counter }}</p>

@@ -1,5 +1,6 @@
 import { DataService } from './../data.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -31,10 +32,13 @@ export class AboutComponent implements OnInit {
   ];
 
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-
+    const urlMsg = this.route.snapshot.paramMap.get('urlMsg');
+    if (urlMsg) {
+      console.log(urlMsg);
+    }
   }
 
   changeColor() {

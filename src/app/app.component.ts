@@ -8,34 +8,10 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'ng7';
-  // ngOnChanges() {
-  //   console.log('ngOnChanges');
-  // }
+  initialCounter = 3;
+  counter: number = this.initialCounter;
 
-  // ngOnInit() {
-  //   console.log('ngOnInit');
-  // }
-
-  // ngDoCheck() {
-  //   console.log('ngDoCheck');
-  // }
-
-  // ngAfterContentInit() {
-  //   console.log('ngAfterContentInit');
-  // }
-  // ngAfterContentChecked() {
-  //   console.log('ngAfterContentChecked');
-  // }
-
-  // ngAfterViewInit() {
-  //   console.log('ngAfterViewInit');
-  // }
-
-  // ngAfterViewChecked() {
-  //   console.log('ngAfterViewChecked');
-  // }
-
-  // ngOnDestroy() {
-  //   console.log('ngOnDestroy');
-  // }
+  onCounterChange(counter: number) {
+    this.counter = counter;
+  }
 }
