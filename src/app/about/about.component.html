@@ -1,3 +1,26 @@
-<p>
-  about works!
-</p>
+<h1> Bind Demo</h1>
+
+<h3>Event Binding</h3>
+<select id="TDDSelect" [value]="selectedId" (change)="selectedId = $event.target.value">
+  <option *ngFor="let item of selectList" [value]="item.id">{{ item.name }}</option>
+</select>
+<p>{{ selectedId }}</p>
+
+
+<h3>Two Way Binding</h3>
+
+<input placeholder="type something" [(ngModel)] ="forTwoway">
+
+<p>{{forTwoway}}</p>
+
+<hr>
+
+<h1 [ngClass]="{color:h1Style}">NgClass Demo</h1> 
+
+<button (click)="changeColor()">Click me to Change Color!</button>
+
+<hr>
+
+<h1>Services Demo</h1>
+
+<button (click)="firstClick()">Click Me!</button>

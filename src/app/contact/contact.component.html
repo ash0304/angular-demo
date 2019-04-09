@@ -1,6 +1,6 @@
 <h1>Contact us</h1>
 
-<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit(messageForm)">
 
   <h5 *ngIf="success">Your form is valid!</h5>
 
